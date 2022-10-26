@@ -26,7 +26,7 @@ void inserirC(carro *&noCarro, char *nome, int ano, int codigoMarca) {}
 
 void listagem(marca *noMarca, carro *noCarro) {}
 
-void removerM(marca *&noMarca, carro *noCarro, int) {}
+void removerM(marca *&noMarca, carro *noCarro, int codigoMarca) {}
 
 void desalocaMarca(marca *&noMarca) {}
 
