@@ -20,7 +20,9 @@ void inserirM(marca *&noMarca, int codigo, float nota) {
   }
 }
 
-float buscaMarca(marca *noMarca, int codigo) {}
+float buscaMarca(marca *noMarca, int codigo) {
+  return 0.0;
+}
 
 void inserirC(carro *&noCarro, char *nome, int ano, int codigoMarca) {}
 
