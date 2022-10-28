@@ -5,8 +5,8 @@
 
 void inserirM(marca *&noMarca, int codigo, float nota) {
   marca *noMarcaAux = noMarca;
-  printf("Chamou");
   marca *novoNo = (marca *)calloc(1, sizeof(marca));
+
   novoNo->codigo = codigo;
   novoNo->nota = nota;
 
