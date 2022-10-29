@@ -19,26 +19,25 @@ int main() {
     scanf("%d", &op);
 
     if (op == 1) {
-      int codigo;
-      float nota;
+      inserirM(noMarca);
+    } 
+    
+    else if (op == 2) {
+      inserirC(noCarro, noMarca);
+    } 
 
-      scanf("%d %f", &codigo, &nota);
-      inserirM(noMarca, codigo, nota);
-    } else if (op == 2) {
-
-      int codigoMarca;
-      int ano;
-      char nome[40];
-
-      scanf("%d %s %d", &codigoMarca, nome, &ano);
-      inserirC(noCarro, nome, ano, codigoMarca);
-
-    } else if (op == 3) {
-
-    } else if (op == 4) {
+    else if (op == 3) {
+      listagem(noMarca, noCarro);
+    } 
+    
+    else if (op == 4) {
+      removerM(noMarca, noCarro);
     }
 
   } while (op != 5);
+
+  desalocaCarro(noCarro);
+  desalocaMarca(noMarca);
 
   // desalocar listas
 
