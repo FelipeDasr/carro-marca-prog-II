@@ -21,17 +21,17 @@ struct carro
     struct carro *prox;
 };
 
-void inserirM(marca *&noMarca, int codigo, float nota);
+void inserirM(marca *&noMarca);
 
 float buscaMarca(marca *noMarca, int codigo);
 
-void inserirC(carro *&noCarro, char *nome, int ano, int codigoMarca);
+void inserirC(carro *&noCarro, marca *noMarca);
 
 
 void listagem(marca *noMarca, carro *noCarro);
 
 
-void removerM(marca *&noMarca, carro *noCarro, int codigoMarca);
+void removerM(marca *&noMarca, carro *noCarro);
 
 
 void desalocaMarca(marca *&noMarca);
