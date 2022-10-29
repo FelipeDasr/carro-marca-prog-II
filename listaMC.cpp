@@ -36,7 +36,34 @@ float buscaMarca(marca *noMarca, int codigo) {
   return 0.0;
 }
 
-void inserirC(carro *&noCarro, char *nome, int ano, int codigoMarca) {}
+void inserirC(carro *&noCarro, marca *noMarca) {
+  carro *noCarroAux = noCarro;
+  carro *novoCarro = (carro*) calloc(1, sizeof(carro));
+
+  printf("\nCódigo da marca: ");
+  scanf("%d", &novoCarro->codigomarca);
+
+  if (buscaMarca(noMarca, novoCarro->codigomarca) == 0) {
+    printf("\nMarca não cadastrada\n");
+    return;
+  }
+
+  printf("Modelo: ");
+  scanf("%s", novoCarro->modelo);
+
+  printf("Ano: ");
+  scanf("%d", &novoCarro->ano);
+
+  if (noCarroAux == NULL) {
+    noCarro = novoCarro;
+  }
+  else {
+    while(noCarroAux->prox != NULL) {
+      noCarroAux = noCarro->prox;
+    }
+    noCarroAux->prox = novoCarro;
+  }
+}
 
 void listagem(marca *noMarca, carro *noCarro) {}
 
