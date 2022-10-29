@@ -24,6 +24,15 @@ void inserirM(marca *&noMarca) {
 }
 
 float buscaMarca(marca *noMarca, int codigo) {
+  marca *noMarcaAux = noMarca;
+
+  while (noMarcaAux) {
+    if (noMarcaAux->codigo == codigo) {
+      return noMarcaAux->nota;
+    }
+    noMarcaAux = noMarcaAux->prox;
+  }
+
   return 0.0;
 }
 
