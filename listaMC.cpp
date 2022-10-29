@@ -65,9 +65,20 @@ void inserirC(carro *&noCarro, marca *noMarca) {
   }
 }
 
-void listagem(marca *noMarca, carro *noCarro) {}
+void listagem(marca *noMarca, carro *noCarro) {
+  carro *noCarroAux = noCarro;
 
-void removerM(marca *&noMarca, carro *noCarro, int codigoMarca) {}
+  while (noCarroAux != NULL) {
+    float notaDaMarca = buscaMarca(noMarca, noCarroAux->codigomarca);
+    printf("\nModelo: %s\tAno: %d\tNota da marca: %.1f", 
+      noCarroAux->modelo,
+      noCarroAux->ano,
+      notaDaMarca
+    );
+    noCarroAux = noCarroAux->prox;
+  }
+  printf("\n");
+}
 
 void desalocaMarca(marca *&noMarca) {}
 
