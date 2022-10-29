@@ -3,12 +3,15 @@
 
 #include "listaMC.h"
 
-void inserirM(marca *&noMarca, int codigo, float nota) {
+void inserirM(marca *&noMarca) {
   marca *noMarcaAux = noMarca;
   marca *novoNo = (marca *)calloc(1, sizeof(marca));
 
-  novoNo->codigo = codigo;
-  novoNo->nota = nota;
+  printf("\nCódigo: ");
+  scanf("%d", &novoNo->codigo);
+
+  printf("Nota: ");
+  scanf("%f", &novoNo->nota);
 
   if (noMarca == NULL) {
     noMarca = novoNo;
